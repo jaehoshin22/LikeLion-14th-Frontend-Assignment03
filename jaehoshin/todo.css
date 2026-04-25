@@ -1,0 +1,67 @@
+/* css 1번 조건 : todo리스트가 화면 중앙에 위치 */
+body {
+    background-color:blue;
+    display: flex;
+    /* 가로 방향 중앙 */
+    justify-content: center;
+    /* 세로 방향 중앙 */
+    align-items: center;
+    /* 화면 높이 100% */
+    min-height: 100vh;
+}
+
+/* css 2번 조건 : todo배경색은 흰색 */
+#todoContainer {
+    width: 60%;
+    background-color: white;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 15px;
+
+
+}
+#todoInput{
+    font-size: 3vw;
+    padding: 0.5em 0.5em;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+/* css 3번 조건 : 추가 버튼 css 적용 */
+button {
+    font-size: 2.6vw;
+    background-color: blue;
+    color:white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+#todoList {
+    width: 100%;
+    padding: 0;
+}
+/* css 4번 조건 : 리스트 간 구분선 넣기 */
+#todoList li{
+    width:100%;
+    padding: 0.5vh 0;
+    border-bottom: 1px solid #eee;
+    font-size: 3vw;
+    list-style:none;
+    text-align: left;
+}
+
+/* css 5번 조건 : 미디어 쿼리 */
+@media (max-width: 767px) {
+    #todoContainer {
+        width: 80%;
+    }
+}
+
+/* css 5번 조건 : 반응형
+   vw: 폰트 사이즈 (화면 너비에 따라 자동 조절)
+   %: todoContainer width (화면 크기에 따라 너비 조절)
+   em: padding, margin (폰트 크기 기준 상대적 여백)
+   vh: min-height (화면 높이 기준)
+   미디어쿼리: 767px 이하 모바일 레이아웃 별도 적용
+*/
